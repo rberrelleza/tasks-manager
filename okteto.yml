@@ -2,6 +2,7 @@ name: api
 command: bash
 environment:
   - DEBUG=True
+  - TEMPLATES_AUTO_RELOAD=True
 sync:
   - .:/usr/src/app
 forward:
