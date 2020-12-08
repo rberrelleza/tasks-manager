@@ -7,6 +7,7 @@ import uuid
 
 app = Flask(__name__)
 uri = 'mongodb://{}:{}@{}/{}'.format(os.environ['DB_USER'], os.environ['DB_PASSWORD'], os.environ['DB_HOST'],os.environ['DB_NAME'])
+print(uri)
 mongo =  PyMongo(app, uri, tls=True, tlsCAFile='/etc/ca-clients/mongodb-ca-cert',tlsCertificateKeyFile='/etc/ca-clients/client-pem')
 
 @app.route('/')
